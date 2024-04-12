@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Note;
 use App\Models\User;
+use App\Models\Student;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,10 +20,9 @@ class DatabaseSeeder extends Seeder
     {
          User::factory(10)->create();
          Note::factory(25)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+          
+         $this->call([
+            StudentSeeder::class
+        ]);
     }
 }
