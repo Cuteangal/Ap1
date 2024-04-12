@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Note;
-use App\Models\User;
-use Database\Factories\CastmorFactory;
 use Illuminate\Http\Request;
 
-class UsersController extends Controller
+class CastmorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +13,9 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users =  User::all();
-        $notes = Note::all();
-        return $notes;
+        $castmor = Castmor::all();
+        return $castmor;
+        
     }
 
     /**
