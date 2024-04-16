@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\student;
 use Database\Factories\StudentFactory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class StudentController extends Controller
 {
@@ -15,8 +17,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $student = Student::paginate();
-        return $student;
+        $users = DB::table('students')->get();
+        return view('student' , ['data' => $users]);
     }
 
     /**

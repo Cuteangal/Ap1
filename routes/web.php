@@ -19,5 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users',[UsersController::class,'index']);
+Route::get('student',function(){
+    return view('student');
+});
+
+
+//Route::get('/users',[UsersController::class,'index']);
 Route::get('/student',[StudentController::class,'index']);
