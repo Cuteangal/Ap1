@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\student;
+use App\Models\Student;
 use Database\Factories\StudentFactory;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+ 
 
 
 class StudentController extends Controller
@@ -17,7 +17,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $users = DB::table('students')->get();
+        $users = Student::all();
         return view('student' , ['data' => $users]);
     }
 
@@ -28,7 +28,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -39,7 +39,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $users 
     }
 
     /**

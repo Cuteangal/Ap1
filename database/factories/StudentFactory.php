@@ -18,6 +18,7 @@ class StudentFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'email' =>fake()->email,
             'address' => fake()->address(),
         ];
     }
